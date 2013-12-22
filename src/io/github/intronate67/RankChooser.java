@@ -9,6 +9,7 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
 
+
 public class RankChooser extends JavaPlugin{
 	public final Logger logger = Logger.getLogger("Minecraft");
 	public static RankChooser plugin;
@@ -49,7 +50,8 @@ public class RankChooser extends JavaPlugin{
 				player.sendMessage(ChatColor.DARK_GRAY + "- " + ChatColor.DARK_PURPLE + "Skillful");
 				player.sendMessage(ChatColor.DARK_GRAY + "- " + ChatColor.GREEN + "Master");
 			}else{
-				Bukkit.broadcast(ChatColor.BLUE + "[ChooseRank] " + ChatColor.AQUA + "Player: " + ChatColor.ITALIC + player.getDisplayName() + ChatColor.AQUA + " Would like to choose the Rank: " ,"fuckbitches.getmoney");
+				player.sendMessage(ChatColor.BLUE + "[ChooseRank] " + ChatColor.AQUA + "You have chosen the rank: " + ChatColor.ITALIC + args[0] + ChatColor.AQUA + ", Now wait for a staff member to rank you.");
+				Bukkit.broadcast(ChatColor.BLUE + "[ChooseRank] " + ChatColor.AQUA + "Player: " + ChatColor.ITALIC + player.getDisplayName() + ChatColor.AQUA + " Would like to choose the Rank: " + ChatColor.ITALIC + args[0],"fuckbitches.getmoney");
 			}
 		}
 			
