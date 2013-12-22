@@ -23,10 +23,9 @@ public class RankChooser extends JavaPlugin{
 		getLogger().info("Rank Chooser" + version + " has been disabled!");
 	}
 	
-	public boolean onCommand(CommandSender sender, Command cmd, String lable, String[] args){
+		public boolean onCommand(CommandSender sender, Command cmd, String lable, String[] args){
 		Player player = (Player) sender;
-		@SupressWarnings("unused")
-		Player target = (Bukkit.getServer().getPlayer(args[0]));
+		Player target = Bukkit.getPlayer(args[1]);
 		if(cmd.getName().equalsIgnoreCase("chooserank")){
 			if(args.length < 10){
 				player.sendMessage(ChatColor.BLUE + "Available Ranks:");
@@ -50,7 +49,7 @@ public class RankChooser extends JavaPlugin{
 				player.sendMessage(ChatColor.DARK_GRAY + "- " + ChatColor.DARK_PURPLE + "Skillful");
 				player.sendMessage(ChatColor.DARK_GRAY + "- " + ChatColor.GREEN + "Master");
 			}else{
-				sender.sendMessage("");
+				Bukkit.broadcast(sender.getName() + target.getName() , "fuckbitches.getmoney");
 			}
 		}
 			
