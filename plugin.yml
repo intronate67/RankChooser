@@ -1,0 +1,16 @@
+name: RankChooser
+main: io.github.intronate67.RankChooser
+version: 1.0
+commands:
+   chooserank:
+      description: Outputs either a message displaying ranks or a message to staff.
+   cr:
+      description: Outputs Plugin information.
+   crhelp:
+      description: Outputs all commands..
+   crhelp 2:
+      description: Outputs information about the /chooserank command.     
+   crhelp 3:
+   	  description: Outputs information about the /cr command.      
+   crhelp 4:
+   	  description:
