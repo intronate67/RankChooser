@@ -13,4 +13,4 @@ commands:
    crhelp 3:
    	  description: Outputs information about the /cr command.      
    crhelp 4:
-   	  description:
+   	  description:  Outputs information about the /crhelp command.
