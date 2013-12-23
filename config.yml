@@ -1,0 +1,15 @@
+#This is where you can configure your servers ranks.
+#Below is where you can change the main ranks
+#Since Novo Lenio's Server had Ranks with Sub Ranks
+#For each one there are sub ranks.
+#if you would like them removed please change the specified rank to false and it wont display
+# you are welcome to change any colors to these are just default.
+
+rank1: 'Architect'
+
+rank2: 'Explorer'
+
+rank3: 'Redstoner'
+
+rank4: false
+	rank_4: 
