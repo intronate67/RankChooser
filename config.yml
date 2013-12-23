@@ -4,6 +4,9 @@
 #For each one there are sub ranks.
 #if you would like them removed please change the specified rank to false and it wont display
 # you are welcome to change any colors to these are just default.
+#Three ranks and five subranks are enabled at default.
+
+#Normal ranks
 
 rank1: 'Architect'
 
@@ -12,4 +15,26 @@ rank2: 'Explorer'
 rank3: 'Redstoner'
 
 rank4: false
-	rank_4: 
+	rank_4: ''
+	
+rank5: false
+	rank_5: ''	
+	
+#Subranks
+
+subrank1: true
+	subrank_1: 'Student'
+subrank2: true
+	subrank_2: 'Apprentice' 	
+subrank3: true	
+	subrank_3: 'Skillful'
+subrank4: true
+	subrank_4: 'Master'
+subrank5: true
+	subrank_5: 'Legendary'
+subrank6: false
+	subrank_6: ''
+subrank7: false
+	subrank_7: ''
+subrank8: false
+	subrank_8: ''
