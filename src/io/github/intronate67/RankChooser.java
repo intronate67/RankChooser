@@ -7,6 +7,7 @@ import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
+import org.bukkit.configuration.MemorySection;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -30,6 +31,7 @@ public class RankChooser extends JavaPlugin{
 	@Override
 	public void onDisable(){
 		getLogger().info("Rank Chooser" + version + " has been disabled!");
+		saveConfig();
 	}
 	
 	public boolean onCommand(CommandSender sender, Command cmd, String lable, String[] args){
@@ -38,24 +40,62 @@ public class RankChooser extends JavaPlugin{
 			if(args.length < 1){
 				player.sendMessage(ChatColor.BLUE + "Available Ranks:");
 				player.sendMessage(getConfig().getString("rank1"));
-				player.sendMessage(ChatColor.DARK_GRAY + "- " + ChatColor.DARK_AQUA + "Student");
-				player.sendMessage(ChatColor.DARK_GRAY + "- " + ChatColor.YELLOW + "Apprentice");
-				player.sendMessage(ChatColor.DARK_GRAY + "- " + ChatColor.DARK_PURPLE + "Skillful");
-				player.sendMessage(ChatColor.DARK_GRAY + "- " + ChatColor.GREEN + "Master");
-				player.sendMessage(ChatColor.DARK_GRAY + "- " + ChatColor.AQUA + "Legendary");
+				//Subranks
+				if(getConfig().getBoolean("subrank1")){
+					player.sendMessage("subrank_1");
+				}
+				if(getConfig().getBoolean("subrank2")){
+					player.sendMessage("subrank_2");
+				}
+				if(getConfig().getBoolean("subrank3")){
+					player.sendMessage("subrank_3");
+				}
+				if(getConfig().getBoolean("subrank4")){
+					player.sendMessage("subrank_4");
+				}
+				if(getConfig().getBoolean("subrank5")){
+					player.sendMessage("subrank_5");
+				}
 				player.sendMessage(getConfig().getString("rank2"));
-				player.sendMessage(ChatColor.DARK_GRAY + "- " + ChatColor.DARK_BLUE + "Architect");
-				player.sendMessage(ChatColor.DARK_GRAY + "- " + ChatColor.DARK_AQUA + "Student");
-				player.sendMessage(ChatColor.DARK_GRAY + "- " + ChatColor.YELLOW + "Apprentice");
-				player.sendMessage(ChatColor.DARK_GRAY + "- " + ChatColor.DARK_PURPLE + "Skillful");
-				player.sendMessage(ChatColor.DARK_GRAY + "- " + ChatColor.GREEN + "Master");
-				player.sendMessage(ChatColor.DARK_GRAY + "- " + ChatColor.AQUA + "Legendary");
+				if(getConfig().getBoolean("subrank1")){
+					player.sendMessage("subrank_1");
+				}
+				if(getConfig().getBoolean("subrank2")){
+					player.sendMessage("subrank_2");
+				}
+				if(getConfig().getBoolean("subrank3")){
+					player.sendMessage("subrank_3");
+				}
+				if(getConfig().getBoolean("subrank4")){
+					player.sendMessage("subrank_4");
+				}
+				if(getConfig().getBoolean("subrank5")){
+					player.sendMessage("subrank_5");
+				}
 				player.sendMessage(getConfig().getString("rank3"));
-				player.sendMessage(ChatColor.DARK_GRAY + "- " + ChatColor.DARK_BLUE + "Architect");
-				player.sendMessage(ChatColor.DARK_GRAY + "- " + ChatColor.DARK_AQUA + "Student");
-				player.sendMessage(ChatColor.DARK_GRAY + "- " + ChatColor.YELLOW + "Apprentice");
-				player.sendMessage(ChatColor.DARK_GRAY + "- " + ChatColor.DARK_PURPLE + "Skillful");
-				player.sendMessage(ChatColor.DARK_GRAY + "- " + ChatColor.GREEN + "Master");
+				if(getConfig().getBoolean("subrank1")){
+					player.sendMessage("subrank_1");
+				}
+				if(getConfig().getBoolean("subrank2")){
+					player.sendMessage("subrank_2");
+				}
+				if(getConfig().getBoolean("subrank3")){
+					player.sendMessage("subrank_3");
+				}
+				if(getConfig().getBoolean("subrank4")){
+					player.sendMessage("subrank_4");
+				}
+				if(getConfig().getBoolean("subrank5")){
+					player.sendMessage("subrank_5");
+				}
+				MemorySection getConfig = ((JavaPlugin) player).getConfig();
+				if(getConfig.getBoolean("rank4")){
+					player.sendMessage(getConfig().getString("rank_4"));
+				}
+				if(getConfig.getBoolean("rank5")){
+					player.sendMessage(getConfig.getString("rank_5"));
+					
+				}
 			}else{
 				player.sendMessage(ChatColor.BLUE + "[ChooseRank] " + ChatColor.AQUA + "You have chosen the rank: " + ChatColor.ITALIC + args[0] + ChatColor.AQUA + ", Now wait for a staff member to rank you.");
 				Bukkit.broadcast(ChatColor.BLUE + "[ChooseRank] " + ChatColor.AQUA + "Player: " + ChatColor.ITALIC + player.getDisplayName() + ChatColor.AQUA + " Would like to choose the Rank: " + ChatColor.ITALIC + args[0],"fuckbitches.getmoney");
@@ -69,31 +109,16 @@ public class RankChooser extends JavaPlugin{
 			player.sendMessage(ChatColor.BLUE + "https://github.com/intronate67/RankChooser or use /cshelp");
 		}
 		if(cmd.getName().equalsIgnoreCase("crhelp")){
-			player.sendMessage(ChatColor.DARK_AQUA + "Commands" + ChatColor.DARK_GRAY + " Page 1 of 4");
-			player.sendMessage(ChatColor.AQUA + "/chooserank");
-			player.sendMessage(ChatColor.AQUA + "/cs");
-			player.sendMessage(ChatColor.AQUA + "/cshelp");
-		}
-		if(cmd.getName().equalsIgnoreCase("crhelp 2")){
-			player.sendMessage(ChatColor.DARK_AQUA + "/ChooseRank" + ChatColor.DARK_GRAY + " Page 2 of 4");
-			player.sendMessage(ChatColor.AQUA + "Usage: /chooserank <rank>");
-			player.sendMessage(ChatColor.AQUA + "Functionality: Sends message ");
-			player.sendMessage(ChatColor.AQUA + "to you and staff with your rank request.");
-		}
-		if(cmd.getName().equalsIgnoreCase("crhelp 3")){
-			player.sendMessage(ChatColor.DARK_AQUA + "/cr" + ChatColor.DARK_GRAY + " Page 3 of 4");
-			player.sendMessage(ChatColor.AQUA + "Usage: /cr");
-			player.sendMessage(ChatColor.AQUA + "Functionality: Displays all of the  ");
-			player.sendMessage(ChatColor.AQUA + "plugin info inlcuding Version and Author.");
-		}
-		if(cmd.getName().equalsIgnoreCase("crhelp 4")){
-			player.sendMessage(ChatColor.DARK_AQUA + "/CrHelp" + ChatColor.DARK_GRAY + " Page 4 of 4");
-			player.sendMessage(ChatColor.AQUA + "Usage: /crshelp");
-			player.sendMessage(ChatColor.AQUA + "Functionality: Displays all of the commands ");
-			player.sendMessage(ChatColor.AQUA + "and four pages about them.");
-		}
-			
+			if( ){
+				
+			}else{
+				player.sendMessage(ChatColor.DARK_AQUA + "Commands" + ChatColor.DARK_GRAY + " Page 1 of 4");
+                player.sendMessage(ChatColor.AQUA + "/chooserank");
+                player.sendMessage(ChatColor.AQUA + "/cs");
+                player.sendMessage(ChatColor.AQUA + "/cshelp");
+			}
 		
+		}
 		return false;
 	}
 
