@@ -15,26 +15,31 @@ rank2: 'Explorer'
 rank3: 'Redstoner'
 
 rank4: false
-	rank_4: ''
-	
+rank_4: ''
 rank5: false
-	rank_5: ''	
-	
+rank_5: ''
 #Subranks
 
 subrank1: true
-	subrank_1: 'Student'
+subrank_1: 'Student'
+
 subrank2: true
-	subrank_2: 'Apprentice' 	
-subrank3: true	
-	subrank_3: 'Skillful'
+subrank_2: 'Apprentice'
+
+subrank3: true
+subrank_3: 'Skillful'
+
 subrank4: true
-	subrank_4: 'Master'
+subrank_4: 'Master'
+
 subrank5: true
-	subrank_5: 'Legendary'
+subrank_5: 'Legendary'
+
 subrank6: false
-	subrank_6: ''
+subrank_6: ''
+
 subrank7: false
-	subrank_7: ''
+subrank_7: ''
+
 subrank8: false
-	subrank_8: ''
+subrank_8: ''
