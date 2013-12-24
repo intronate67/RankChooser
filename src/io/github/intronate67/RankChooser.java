@@ -15,7 +15,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 public class RankChooser extends JavaPlugin{
 	public final Logger logger = Logger.getLogger("Minecraft");
 	public static RankChooser plugin;
-	public int version = (int) 1.3;
+	public int version = (int) 1.1;
 	public String author = "intronate67";
 
 	@Override
@@ -42,52 +42,52 @@ public class RankChooser extends JavaPlugin{
 				player.sendMessage(getConfig().getString("rank1"));
 				//Subranks
 				if(getConfig().getBoolean("subrank1")){
-					player.sendMessage("subrank_1");
+					player.sendMessage("subrank1.subrank_1");
 				}
 				if(getConfig().getBoolean("subrank2")){
-					player.sendMessage("subrank_2");
+					player.sendMessage("subrank2.subrank_2");
 				}
 				if(getConfig().getBoolean("subrank3")){
-					player.sendMessage("subrank_3");
+					player.sendMessage("subrank3.subrank_3");
 				}
 				if(getConfig().getBoolean("subrank4")){
-					player.sendMessage("subrank_4");
+					player.sendMessage("subrank4.subrank_4");
 				}
 				if(getConfig().getBoolean("subrank5")){
-					player.sendMessage("subrank_5");
+					player.sendMessage("subrank5.subrank_5");
 				}
 				player.sendMessage(getConfig().getString("rank2"));
 				if(getConfig().getBoolean("subrank1")){
-					player.sendMessage("subrank_1");
+					player.sendMessage("subrank1.subrank_1");
 				}
 				if(getConfig().getBoolean("subrank2")){
-					player.sendMessage("subrank_2");
+					player.sendMessage("subrank2.subrank_2");
 				}
 				if(getConfig().getBoolean("subrank3")){
-					player.sendMessage("subrank_3");
+					player.sendMessage("subrank3.subrank_3");
 				}
 				if(getConfig().getBoolean("subrank4")){
-					player.sendMessage("subrank_4");
+					player.sendMessage("subrank4.subrank_4");
 				}
 				if(getConfig().getBoolean("subrank5")){
-					player.sendMessage("subrank_5");
-				}
+					player.sendMessage("subrank5.subrank_5");
+				}	
 				player.sendMessage(getConfig().getString("rank3"));
 				if(getConfig().getBoolean("subrank1")){
-					player.sendMessage("subrank_1");
+					player.sendMessage("subrank1.subrank_1");
 				}
 				if(getConfig().getBoolean("subrank2")){
-					player.sendMessage("subrank_2");
+					player.sendMessage("subrank2.subrank_2");
 				}
 				if(getConfig().getBoolean("subrank3")){
-					player.sendMessage("subrank_3");
+					player.sendMessage("subrank3.subrank_3");
 				}
 				if(getConfig().getBoolean("subrank4")){
-					player.sendMessage("subrank_4");
+					player.sendMessage("subrank4.subrank_4");
 				}
 				if(getConfig().getBoolean("subrank5")){
-					player.sendMessage("subrank_5");
-				}
+					player.sendMessage("subrank5.subrank_5");
+				}	
 				MemorySection getConfig = ((JavaPlugin) player).getConfig();
 				if(getConfig.getBoolean("rank4")){
 					player.sendMessage(getConfig().getString("rank_4"));
@@ -109,7 +109,7 @@ public class RankChooser extends JavaPlugin{
 			player.sendMessage(ChatColor.BLUE + "https://github.com/intronate67/RankChooser or use /cshelp");
 		}
 		if(cmd.getName().equalsIgnoreCase("crhelp")){
-			if( ){
+			if(){
 				
 			}else{
 				player.sendMessage(ChatColor.DARK_AQUA + "Commands" + ChatColor.DARK_GRAY + " Page 1 of 4");
