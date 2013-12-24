@@ -17,6 +17,9 @@ public class RankChooser extends JavaPlugin{
 	public static RankChooser plugin;
 	public int version = (int) 1.1;
 	public String author = "intronate67";
+	public int one = 1;
+	public int two = 2;
+	public int three = 3;
 
 	@Override
 	public void onEnable(){
@@ -109,16 +112,15 @@ public class RankChooser extends JavaPlugin{
 			player.sendMessage(ChatColor.BLUE + "https://github.com/intronate67/RankChooser or use /cshelp");
 		}
 		if(cmd.getName().equalsIgnoreCase("crhelp")){
-			if(){
-				
+			if(args.length > 1){
+				player.sendMessage("Derp");
+			}
 			}else{
 				player.sendMessage(ChatColor.DARK_AQUA + "Commands" + ChatColor.DARK_GRAY + " Page 1 of 4");
                 player.sendMessage(ChatColor.AQUA + "/chooserank");
                 player.sendMessage(ChatColor.AQUA + "/cs");
                 player.sendMessage(ChatColor.AQUA + "/cshelp");
 			}
-		
-		}
 		return false;
 	}
 
