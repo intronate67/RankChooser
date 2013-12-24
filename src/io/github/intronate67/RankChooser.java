@@ -7,7 +7,6 @@ import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
-import org.bukkit.configuration.MemorySection;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -45,59 +44,57 @@ public class RankChooser extends JavaPlugin{
 				player.sendMessage(getConfig().getString("rank1"));
 				//Subranks
 				if(getConfig().getBoolean("subrank1")){
-					player.sendMessage("subrank1.subrank_1");
+					player.sendMessage(ChatColor.DARK_GRAY + "- " + "subrank_1");
 				}
 				if(getConfig().getBoolean("subrank2")){
-					player.sendMessage("subrank2.subrank_2");
+					player.sendMessage(ChatColor.DARK_GRAY + "- " + "subrank_2");
 				}
 				if(getConfig().getBoolean("subrank3")){
-					player.sendMessage("subrank3.subrank_3");
+					player.sendMessage(ChatColor.DARK_GRAY + "- " + "subrank_3");
 				}
 				if(getConfig().getBoolean("subrank4")){
-					player.sendMessage("subrank4.subrank_4");
+					player.sendMessage(ChatColor.DARK_GRAY + "- " + "subrank_4");
 				}
 				if(getConfig().getBoolean("subrank5")){
-					player.sendMessage("subrank5.subrank_5");
+					player.sendMessage(ChatColor.DARK_GRAY + "- " + "subrank_5");
 				}
 				player.sendMessage(getConfig().getString("rank2"));
 				if(getConfig().getBoolean("subrank1")){
-					player.sendMessage("subrank1.subrank_1");
+					player.sendMessage(ChatColor.DARK_GRAY + "- " + "subrank_1");
 				}
 				if(getConfig().getBoolean("subrank2")){
-					player.sendMessage("subrank2.subrank_2");
+					player.sendMessage(ChatColor.DARK_GRAY + "- " + "subrank_2");
 				}
 				if(getConfig().getBoolean("subrank3")){
-					player.sendMessage("subrank3.subrank_3");
+					player.sendMessage(ChatColor.DARK_GRAY + "- " + "subrank_3");
 				}
 				if(getConfig().getBoolean("subrank4")){
-					player.sendMessage("subrank4.subrank_4");
+					player.sendMessage(ChatColor.DARK_GRAY + "- " + "subrank_4");
 				}
 				if(getConfig().getBoolean("subrank5")){
-					player.sendMessage("subrank5.subrank_5");
+					player.sendMessage(ChatColor.DARK_GRAY + "- " + "subrank_5");
 				}	
 				player.sendMessage(getConfig().getString("rank3"));
 				if(getConfig().getBoolean("subrank1")){
-					player.sendMessage("subrank1.subrank_1");
+					player.sendMessage(ChatColor.DARK_GRAY + "- " + "subrank_1");
 				}
 				if(getConfig().getBoolean("subrank2")){
-					player.sendMessage("subrank2.subrank_2");
+					player.sendMessage(ChatColor.DARK_GRAY + "- " + "subrank_2");
 				}
 				if(getConfig().getBoolean("subrank3")){
-					player.sendMessage("subrank3.subrank_3");
+					player.sendMessage(ChatColor.DARK_GRAY + "- " + "subrank_3");
 				}
 				if(getConfig().getBoolean("subrank4")){
-					player.sendMessage("subrank4.subrank_4");
+					player.sendMessage(ChatColor.DARK_GRAY + "- " + "subrank_4");
 				}
 				if(getConfig().getBoolean("subrank5")){
-					player.sendMessage("subrank5.subrank_5");
+					player.sendMessage(ChatColor.DARK_GRAY + "- " + "subrank_5");
 				}	
-				MemorySection getConfig = ((JavaPlugin) player).getConfig();
-				if(getConfig.getBoolean("rank4")){
+				if(getConfig().getBoolean("rank4")){
 					player.sendMessage(getConfig().getString("rank_4"));
 				}
-				if(getConfig.getBoolean("rank5")){
-					player.sendMessage(getConfig.getString("rank_5"));
-					
+				if(getConfig().getBoolean("rank5")){
+					player.sendMessage(getConfig().getString("rank_5"));
 				}
 			}else{
 				player.sendMessage(ChatColor.BLUE + "[ChooseRank] " + ChatColor.AQUA + "You have chosen the rank: " + ChatColor.ITALIC + args[0] + ChatColor.AQUA + ", Now wait for a staff member to rank you.");
