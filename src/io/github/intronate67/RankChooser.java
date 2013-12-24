@@ -15,7 +15,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 public class RankChooser extends JavaPlugin{
 	public final Logger logger = Logger.getLogger("Minecraft");
 	public static RankChooser plugin;
-	public int version = (int) 1.1;
+	public int version = (int) 1.3;
 	public String author = "intronate67";
 
 	@Override
